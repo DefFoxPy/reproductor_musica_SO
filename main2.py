@@ -193,10 +193,10 @@ if __name__ == "__main__":
             lock,
         ),
     )
-    # p_display.start()
+    #p_display.start() # en display.py se ejecuta por separado para no molestar visualmente
     p_user1.start()
     p_user2.start()
 
-    # p_display.join()
+    #p_display.join()
     p_user1.join()
     p_user2.join()
