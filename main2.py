@@ -30,6 +30,7 @@ def add_song(song, song_list_file, lock):
     print(f"(>) {song.added_by} intenga agregar una música")
     if not lock.acquire(block=False):
         print("(!) Ya Existe un usuario que está agregando una canción")
+        time.sleep(1)
         return False
     elif song_exists(song, song_list_file):
         time.sleep(TIME_WRITE)
@@ -169,7 +170,7 @@ new_song8 = Song(
 
 if __name__ == "__main__":
     song_list_file = "song_list.csv"
-    sounds_list = [new_song1, new_song2, new_song3, new_song4]
+    sounds_list = [new_song1, new_song2, new_song3, new_song4, new_song5, new_song6, new_song7, new_song8]
 
     lock = Lock()
 
