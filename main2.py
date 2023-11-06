@@ -131,6 +131,42 @@ new_song4 = Song(
     "3:57",
 )
 
+new_song5 = Song(
+    "Bury the Light",
+    "Victor Borda",
+    "Bury the Light",
+    time.strftime("%Y-%m-%d"),
+    "x",
+    "9:42",
+)
+
+new_song6 = Song(
+    "Devil Trigger",
+    "Casey Edwards",
+    "Devil May Cry 5",
+    time.strftime("%Y-%m-%d"),
+    "x",
+    "2:36",
+)
+
+new_song7 = Song(
+    "El Problema",
+    "Ricardo Arjona",
+    "Santo Pecado",
+    time.strftime("%Y-%m-%d"),
+    "x",
+    "5:30",
+)
+
+new_song8 = Song(
+    "Rise",
+    "Justi Tranter",
+    "Rise",
+    time.strftime("%Y-%m-%d"),
+    "x",
+    "3:12",
+)
+
 if __name__ == "__main__":
     song_list_file = "song_list.csv"
     sounds_list = [new_song1, new_song2, new_song3, new_song4]
@@ -156,9 +192,10 @@ if __name__ == "__main__":
             lock,
         ),
     )
-
+    # p_display.start()
     p_user1.start()
     p_user2.start()
 
+    # p_display.join()
     p_user1.join()
     p_user2.join()
